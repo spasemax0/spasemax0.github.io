@@ -1,24 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Site Start</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <audio id="myAudio" src="C:\Users\smaxi\code\gamesongfin.mp3"></audio>
+  <script type="text/javascript">
+    var audio = document.getElementById("myAudio");
+    audio.volume = 0.5;
+    function playAudio() {
+      audio.play();
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Spase M Sandoval</h1>
-        <p>JTC372</p>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: spasemax@colostate.edu</p>
-        <!-- additional contact info -->
-    </section>
+  <!-- Home Page -->
+  <section class="home">
+    <h1>Welcome to Max's World</h1>
+    <p>Feel free to reference my previous projects and portfolio!</p>
+    <button onclick="playAudio()">Play Music</button>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Spase Sandoval</p>
-    </footer>
+  <!-- About Page -->
+  <section class="about">
+    <img src="C:\Users\smaxi\code\IMG_82091.jpg" alt="nada">
+    <h2>About Me</h2>
+    <p>Hi, my name is Spase Sandoval</p>
+  </section>
+
+  <!-- Resume Page -->
+  <section class="resume">
+    <h2>Resume</h2>
+    <p>Here is my resume:</p>
+    <a href="resume.pdf">Download Resume</a>
+  </section>
+
+  <!-- Portfolio Page -->
+  <section class="portfolio">
+    <h2>Portfolio</h2>
+    <ul>
+      <li><a href="project1.html">Project 1</a></li>
+      <li><a href="project2.html">Project 2</a></li>
+      <li><a href="project3.html">Project 3</a></li>
+    </ul>
+  </section>
 </body>
 </html>
