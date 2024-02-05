@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   <title>My Website</title>
   <link rel="stylesheet" href="style.css">
-  <audio id="myAudio" src="C:\Users\smaxi\code\gamesongfin.mp3"></audio>
+  <audio id="myAudio" src="willUpdateAudioPathHere.mp3"></audio>
   <script type="text/javascript">
     var audio = document.getElementById("myAudio");
     audio.volume = 0.5;
-    function playAudio() {
+    function toggleAudio() {
+      if (audio.paused) {
       audio.play();
+    } else {
+        audio.pause();
     }
+}
   </script>
 </head>
 <body>
@@ -20,7 +24,6 @@
       <ul>
         <li><a href="homepage.html">Home</a></li>
         <li><a href="aboutme.html">About Me</a></li>
-        <li><a href="resume.html">Resume</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -29,32 +32,32 @@
 
   <!-- Home Page -->
   <section class="home">
-    <h1>Welcome to Max's World</h1>
+    <h1>welcome to my website</h1>
     <p>Feel free to reference my previous projects and portfolio!</p>
-    <button onclick="playAudio()">Play Music</button>
+    <p> check out my music (will add music later) </p>
+    <button onclick="toggleAudio()">Play/Pause Music</button>
   </section>
 
-  <!-- About Page -->
+  <!-- About Me Short -->
   <section class="about">
-    <img src="C:\Users\smaxi\code\IMG_82091.jpg" alt="nada">
-    <h2>About Me</h2>
-    <p>Hi, my name is Spase Sandoval</p>
+    <img src="will_put_a_profile_picture_here.jpg" alt="nada">
+    <h2>short about me/website description</h2>
+    <p>Hi, my name is Spase Sandoval......</p>
   </section>
 
-  <!-- Resume Page -->
-  <section class="resume">
-    <h2>Resume</h2>
-    <p>Here is my resume:</p>
-    <a href="resume.pdf">Download Resume</a>
+  <!-- Cool Stuff Section -->
+  <section class="cool">
+    <h2>possibly put game here or something fun, stuff thats irrelevant to my degree but is still cool that i have worked on</h2>
+    <p>description of stuff</p>
   </section>
 
-  <!-- Portfolio Page -->
+  <!-- Portfolio QuickLinks -->
   <section class="portfolio">
-    <h2>Portfolio</h2>
+    <h2>front page stuff and some main project summaries/quicklinks to those projects, may change to links outside website, such as other websites or public projects on apps like wordpress</h2>
     <ul>
-      <li><a href="project1.html">Project 1</a></li>
-      <li><a href="project2.html">Project 2</a></li>
-      <li><a href="project3.html">Project 3</a></li>
+      <li><a href="portfolio.html">Project A</a></li>
+      <li><a href="portfolio.html">Project B</a></li>
+      <li><a href="portfolio.html">Project C</a></li>
     </ul>
   </section>
 </body>
