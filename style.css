@@ -1,53 +1,38 @@
-/* Base */
+:root {
+    --primary-color: #0052cc;
+    --secondary-color: #0336ff;
+    --accent-color: #ff03b3;
+    --text-color: #333;
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-stack);
     background-color: #f0f0f0;
-    color: #333;
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-/* Container for content */
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    transition: width 0.5s ease-in-out;
 }
 
-/* Custom image options for background */
-.bg-image-1 {
-    background-image: url('someImage.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.bg-image-2 {
-    background-image: url('someImage2.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Header */
 header {
-    background: #0052cc;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: #ffffff;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #0779e4 3px solid;
+    border-bottom: 3px solid var(--accent-color);
 }
 
-header a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-    background: #0336ff;
+    background: var(--secondary-color);
     color: #ffffff;
 }
 
@@ -63,38 +48,42 @@ nav ul li {
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Animation 4 Links */
 a:hover {
-    animation: linkGlow 0.5s ease-in-out forwards;
+    color: var(--accent-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
-@keyframes linkGlow {
-    from {
-        background-color: transparent;
-        color: #ffffff;
-    }
-    to {
-        background-color: #ffffff;
-        color: #ff03b3;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-}
-
-/* Footer */
 footer {
-    background: #0336ff;
+    background: var(--secondary-color);
     color: #ffffff;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
 }
 
-/* Responsive */
+.container, header, footer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 95%;
+    }
+
+    header, nav ul li {
+        padding-top: 10px;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
     }
 }
