@@ -1,89 +1,167 @@
 :root {
-    --primary-color: #0052cc;
-    --secondary-color: #0336ff;
-    --accent-color: #ff03b3;
-    --text-color: #333;
-    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --primary-color: #d3d3d346; 
+    --secondary-color: #05df22;  
+    --accent-color: #ff03b3;  
+    --text-color: #fff;  
+    --font-stack: 'Fira Code', monospace;
 }
 
+html, body {
+    height: 100%; 
+    margin: 0;  
+    padding: 0;  
+    background-image: url('images/website_background.png');
+    background-size: cover;  
+    background-position: center;  
+    background-attachment: fixed;  
+    background-repeat: no-repeat;  
+ }
 body {
-    font-family: var(--font-stack);
-    background-color: #f0f0f0;
-    color: var(--text-color);
-    line-height: 1.6;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in; 
+}
+.title, .subtitle, p, h1, h2, h3 {
+    color: #ffffff; 
+}
+.hero {
+    width: 100%;  
+    padding: 20px 0;  
+    box-sizing: border-box; 
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    transition: width 0.5s ease-in-out;
+    width: 80%;  
+    margin: 0 auto;  
+    padding: 20px;  
+    box-sizing: border-box; 
+}
+.background { width: 80%;  
+    margin: 0 auto;  
+    padding: 20px;  
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.75);  
+}
+.profile-image {
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    gap: 20px;  
+}
+
+.profile-image img {
+    height: 300px;  
+    width: auto; 
+    max-width: 50%;  
+    object-fit: cover;  
 }
 
 header {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: 3px solid var(--accent-color);
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+}
+header, nav, footer, main {
+    font-family: var(--font-stack);
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    background: var(--secondary-color);
-    color: #ffffff;
+    justify-content: space-between;  
 }
 
 nav ul {
-    list-style: none;
+    list-style: none;  
     display: flex;
+    align-items: center; 
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 20px; 
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;  
+    display: inline-block; 
+    transition: background-color 0.3s, color 0.3s;  
 }
 
-a:hover {
-    color: var(--accent-color);
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+nav ul li a:hover {
+    background-color: var(--accent-color);  
+    color: #ffffff;  
 }
+
+.project {
+    display: flex;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.75); 
+    max-width: 80%;
+    color: #ffffff;
+    flex-wrap: wrap;  
+}
+.project-image {
+    flex: 1 1 auto; 
+    max-width: calc(25% - 20px);  
+    object-fit: contain;
+    margin: 50px;
+}
+.project-image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
+    justify-content: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .project-image-gallery img {
+    width: 100%; 
+    max-width: 400px; 
+    height: 600px; 
+    border-radius: 4px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+.project div {
+    flex: 1 1 100%; 
+}
+
+.project h3, .project p {
+    margin: 0 0 10px; 
+}
+
+.project a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;  
+}
+
+.project a:hover {
+    color: #ffffff;  
+}
+a:link {
+    color: #02c412;  
+}
+
+a:visited {
+    color: #ffffff; 
+}
+
+a:hover { 
+    color: #d300b7;  
+}
+
+a:active { 
+    color: #c02ba7; 
+}
+
 
 footer {
-    background: var(--secondary-color);
-    color: #ffffff;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
-}
-
-.container, header, footer {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-
-    header, nav ul li {
-        padding-top: 10px;
-        margin: 0 10px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
+    margin-top: 20px; 
 }
