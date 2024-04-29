@@ -2,46 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Projects</title>
+  <title>My Projects - Spase Sandoval</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutme.html">About Me</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
-    <section id="projects and resume">
-      <h1>my portfolio/projects/accomplishments/ and downloadable resume at the bottom, educational/work oriented stuff only</h1>
-      <ul>
-        <li>
-          <h2>Project A</h2>
-          <p> decription A </p>
-        </li>
-        <li>
-          <h2>Project B</h2>
-          <p> description B </p>
-        </li>
-        <li>
-          <h2>Project C</h2>
-          <p> description C </p>
-        </li>
-        <section class="resume">
-          <h3>Resume</h3>
-          <p>section to download/view a public resume</p>
-          <a href="resume.pdf">Download Resume</a>
+    <div class="background">
+      <section id="projects-and-resume">
+        <h1>Projects and Resume</h1>
+        <ul>
+          <li>
+            <h2><a href="projectA.html">Automated Red Team Toolkit with Raspberry Pi</a></h2>
+            <p>Automated Red Team Toolkit with Raspberry Pi and Peripherals</p>
+          </li>
+          <li>
+            <h2><a href="projectB.html">Raspberry Pi Pico Macro Keyboard</a></h2>
+            <p>Customizable macro keyboard made with a raspberry pi pico microcontroller and circuitpython</p>
+          </li>
+          <li>
+            <h2><a href="projectC.html">Raspberry Pi Pico USB HID Device using PicoDucky</a></h2>
+            <p>Raspberry Pi Pico USB HID Device using PicoDucky, hands free pre-programmable keyboard</p>
+          </li>
+        </ul>
+        <section id="resume">
+          <h2>Resume</h2>
+          <p>Download my resume to view my educational background and work experience.</p>
+          <a href="Spase Sandoval's Resume.pdf" download="Spase_Sandoval_Resume">Download Resume</a>
         </section>
-      </ul>
-    </section>
+      </section>
+    </div>
   </main>
   <footer>
-    <p>&copy; 2023 Spase Sandoval</p>
+    <div class="container">
+      <p>&copy; 2024 Spase Sandoval</p>
+    </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
